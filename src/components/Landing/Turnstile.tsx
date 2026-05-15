@@ -14,6 +14,7 @@ declare global {
           "error-callback"?: () => void;
           "expired-callback"?: () => void;
           theme?: "auto" | "light" | "dark";
+          appearance?: "always" | "execute" | "interaction-only";
         },
       ) => string;
       reset: (widgetId: string) => void;
@@ -89,6 +90,7 @@ export function Turnstile({ siteKey, onToken, onError, ref }: TurnstileProps) {
         widgetIdRef.current = window.turnstile.render(containerRef.current, {
           sitekey: siteKey,
           theme: "dark",
+          appearance: "interaction-only",
           callback: (token) => onTokenRef.current(token),
           "error-callback": () => onErrorRef.current(),
           "expired-callback": () => onErrorRef.current(),
