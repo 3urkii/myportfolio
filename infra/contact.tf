@@ -128,6 +128,15 @@ resource "aws_lambda_function" "contact" {
   ]
 }
 
+# --- Public invoke permission (lambda:InvokeFunction + lambda:InvokeFunctionUrl) ---
+
+resource "aws_lambda_permission" "contact_public" {
+  statement_id  = "AllowPublicInvoke"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.contact.function_name
+  principal     = "*"
+}
+
 # --- Public Function URL. CORS is scoped to the apex domain; AWS applies the
 # CORS headers to every response and answers the browser's OPTIONS preflight. ---
 
