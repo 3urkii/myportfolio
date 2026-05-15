@@ -114,8 +114,6 @@ resource "aws_lambda_function" "contact" {
   memory_size   = 128
   timeout       = 10
 
-  reserved_concurrent_executions = 5
-
   environment {
     variables = {
       SNS_TOPIC_ARN          = aws_sns_topic.contact.arn
