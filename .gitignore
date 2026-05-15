@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# build output
+out/
+dist/
+.vite/
+
+# env
+.env
+
+# terraform
+.terraform/
+*.tfvars
+!*.tfvars.example
+terraform.tfstate
+terraform.tfstate.*
+*.tfplan
+.terraform.tfstate.lock.info
+
+# lambda build artifacts
+infra/*.zip
+
+# os
+.DS_Store
