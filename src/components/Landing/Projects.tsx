@@ -14,20 +14,17 @@ type Project = {
 const projects: Project[] = [
   {
     name: "berke.pro",
-    line: "This site. Vite + React on S3 behind CloudFront, deployed by GitHub Actions over OIDC — no AWS keys in the repo.",
-    links: [
-      { label: "Live", href: "https://berke.pro" },
-      { label: "Source", href: "https://github.com/3urkii/myportfolio" },
-    ],
+    line: "This website. Terraform IaC, S3/CloudFront, Lambda contact form (Turnstile, SSM, SNS), and OIDC CI deploy.",
+    links: [{ label: "Source", href: "https://github.com/3urkii/myportfolio" }],
   },
   {
-    name: "Homelab",
-    line: "Two Proxmox nodes and a self-built TrueNAS box. Where I break things before production has to.",
-    links: [{ label: "Source", href: "https://github.com/3urkii/homelab" }],
+    name: "Homelab Monitoring Dashboard",
+    line: "My custom build dashboard for monitoring my homelab, controlling smart lights, and a local LLM chat.",
+    links: [{ label: "Source", href: "https://github.com/3urkii/homelab-monitoring" }],
   },
   {
     name: "LatiArch",
-    line: "Arch + Hyprland setup forked from Omarchy. One command from a clean install to a working desktop.",
+    line: "Arch + Hyprland setup inspired by Omarchy. One command from a clean install to a working desktop. I am currently working on my own setup from scratch.",
     links: [{ label: "Source", href: "https://github.com/3urkii/latiarch" }],
   },
 ];
@@ -54,9 +51,10 @@ export function Projects() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[12px] font-light text-foreground/50 transition-colors hover:text-red"
+                      className="inline-flex items-center gap-1 text-[10px] font-normal uppercase tracking-[0.12em] text-red/85 transition-colors hover:text-red"
                     >
                       {link.label}
+                      <span aria-hidden>↗</span>
                     </a>
                   ))}
                 </div>

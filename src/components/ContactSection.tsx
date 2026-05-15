@@ -9,8 +9,8 @@ const cards = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/ryan-berke-b093152a7",
-    href: "https://www.linkedin.com/in/ryan-berke-b093152a7/",
+    value: "linkedin.com/in/ryan-berke",
+    href: "https://www.linkedin.com/in/ryan-berke",
     primary: false,
   },
   {
