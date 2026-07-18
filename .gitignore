@@ -23,3 +23,6 @@ infra/*.zip
 
 # os
 .DS_Store
+
+# ide
+.idea/

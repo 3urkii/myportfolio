@@ -22,8 +22,10 @@ const certs: Cert[] = [
   {
     name: "Azure Administrator Associate",
     issuer: "Microsoft",
-    code: "AZ-104",
-    inProgress: true,
+    date: "Jul 2026",
+    badge: "/az-104-badge.svg",
+    verifyUrl:
+      "https://learn.microsoft.com/api/credentials/share/en-us/RyanBerke-4550/D8AC2CDDC90B45?sharingId=42C3391046DE6EBD",
   },
 ];
 
