@@ -22,11 +22,6 @@ const projects: Project[] = [
     line: "My custom build dashboard for monitoring my homelab, controlling smart lights, and a local LLM chat.",
     links: [{ label: "Source", href: "https://github.com/3urkii/homelab-monitoring" }],
   },
-  {
-    name: "LatiArch",
-    line: "Arch + Hyprland setup inspired by Omarchy. One command from a clean install to a working desktop. I am currently working on my own setup from scratch.",
-    links: [{ label: "Source", href: "https://github.com/3urkii/latiarch" }],
-  },
 ];
 
 export function Projects() {

@@ -1,27 +1,32 @@
 import { SectionHeading } from "@/components/Landing/SectionHeading";
 
+type Role = {
+  date: string;
+  title: string;
+};
+
 type Entry = {
   date: string;
   title: string;
   org: string;
   line: string;
   current?: boolean;
+  previousRoles?: Role[];
 };
 
 const entries: Entry[] = [
   {
-    date: "Mar 2025 — Now",
-    title: "L1 Support Engineer",
+    date: "Sep 2026 — Now",
+    title: "L2 Support Engineer",
     org: "LocalStack · Remote",
     line: "LocalStack is a local sandbox to develop and break cloud infrastructure before it goes live. Here, I work with customers to triage and debug their issues with LocalStack to provide an ideal environment for testing their infrastructure.",
     current: true,
-  },
-  {
-    date: "Jan 2025 — Now",
-    title: "IT Technician",
-    org: "Basis Practice Solutions · Remote",
-    line: "Side hustle contract work including incident response and after-hours on-call rotations for a myriad of healthcare clients across the US.",
-    current: true,
+    previousRoles: [
+      {
+        date: "Mar 2025 — Sep 2026",
+        title: "L1 Support Engineer",
+      },
+    ],
   },
   {
     date: "Feb 2024 — Mar 2025",
@@ -88,6 +93,23 @@ export function Experience() {
                   <p className="mt-2 max-w-[440px] text-[13.5px] font-light leading-[1.65] text-foreground/60">
                     {entry.line}
                   </p>
+                  {entry.previousRoles && (
+                    <ul className="mt-3 flex flex-col gap-3">
+                      {entry.previousRoles.map((role) => (
+                        <li
+                          key={`${role.title}-${role.date}`}
+                          className="flex flex-col gap-1"
+                        >
+                          <span className="text-[10.5px] font-normal uppercase tracking-[0.12em] text-foreground/40">
+                            {role.date}
+                          </span>
+                          <span className="text-[12.5px] font-light text-foreground/50">
+                            {role.title}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </li>
             );

@@ -27,6 +27,12 @@ const certs: Cert[] = [
     verifyUrl:
       "https://learn.microsoft.com/api/credentials/share/en-us/RyanBerke-4550/D8AC2CDDC90B45?sharingId=42C3391046DE6EBD",
   },
+  {
+    name: "Certified Kubernetes Administrator",
+    issuer: "Linux Foundation",
+    code: "CKA",
+    inProgress: true,
+  },
 ];
 
 export function Certifications() {
@@ -34,7 +40,7 @@ export function Certifications() {
     <section id="certifications" className="border-t border-white/[0.09]">
       <div className="mx-auto max-w-[680px] px-6 py-[60px] sm:px-8">
         <SectionHeading title="Certifications" />
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-3">
           {certs.map((cert) => (
             <div
               key={cert.name}
